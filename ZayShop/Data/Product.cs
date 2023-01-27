@@ -23,5 +23,8 @@ namespace ZayShop.Data
         public virtual ICollection<ProductSpecification> Specifications { get; set; }
         public virtual ICollection<ProductSize> Sizes { get; set; }
         public virtual ICollection<ProductImages> Images { get; set; }
+        public virtual ICollection<CartItem> CartItems { get; set; }
+        public virtual ICollection<Like> Likes { get; set; }
+        public virtual ICollection<Star> Stars { get; set; }
     }
 }

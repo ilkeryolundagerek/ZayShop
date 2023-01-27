@@ -184,6 +184,7 @@
     <Compile Include="Data\Brand.cs" />
     <Compile Include="Data\Category.cs" />
     <Compile Include="Data\Color.cs" />
+    <Compile Include="Data\Customer.cs" />
     <Compile Include="Data\Product.cs" />
     <Compile Include="Data\ProductImages.cs" />
     <Compile Include="Data\ProductSize.cs" />
@@ -196,6 +197,10 @@
     <Compile Include="Migrations\202301271609550_first.cs" />
     <Compile Include="Migrations\202301271609550_first.designer.cs">
       <DependentUpon>202301271609550_first.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301271842160_likes_stars.cs" />
+    <Compile Include="Migrations\202301271842160_likes_stars.designer.cs">
+      <DependentUpon>202301271842160_likes_stars.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Home\IndexViewModel.cs" />
@@ -242,6 +247,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202301271609550_first.resx">
       <DependentUpon>202301271609550_first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301271842160_likes_stars.resx">
+      <DependentUpon>202301271842160_likes_stars.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
