@@ -91,5 +91,29 @@ namespace ZayShop.Services
                        };
             }
         }
+
+        public ProductDetailModel GetProduct(string url)
+        {
+            var product = _productRepo.ReadMany().ToList().FirstOrDefault(x => x.Title.ToUrl() == url);
+            var result = new ProductDetailModel
+            {
+                Price = product.Price,
+                FeaturedImage = product.FeaturedImage,
+                Brand = product.Brand.Title,
+                BrandUrl = product.Brand.Title.ToUrl(),
+                Category = product.Category.Title,
+                CategoryUrl = product.Category.Title.ToUrl(),
+                Title = product.Title,
+                DiscountedPrice = product.IsInCampaign ? (product.Price * ((100 - product.CampaignRate) / 100m)) : 0,
+                Detail = product.Detail,
+                TaxRate = product.TaxRate,
+                Colors = product.Colors.Select(c => c.Title),
+                Sizes = product.Sizes.Select(c => c.Title),
+                Gallery = product.Images.Select(c => c.ImageUrl).ToList(),
+                Specifications = product.Specifications.Select(c => c.Title)
+            };
+            result.Gallery.Insert(0, product.FeaturedImage);
+            return result;
+        }
     }
 }

@@ -17,7 +17,7 @@ namespace ZayShop.Controllers
 
         public ActionResult ProductDetail(string product)
         {
-            return View();
+            return View(new ShopDetailViewModel(product));
         }
     }
 }

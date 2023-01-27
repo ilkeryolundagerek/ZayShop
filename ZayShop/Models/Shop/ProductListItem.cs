@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Utilities;
+using ZayShop.Data;
 using ZayShop.Services;
 
 namespace ZayShop.Models.Shop
@@ -47,5 +48,34 @@ namespace ZayShop.Models.Shop
             CategoryFilter = category;
             BrandFilter = brand;
         }
+    }
+
+    public class ShopDetailViewModel
+    {
+        public ProductDetailModel Product { get; set; }
+        //public IEnumerable<ProductListItem> RelatedProducts { get; set; }
+        public ShopDetailViewModel(string product)
+        {
+            ShopService service = new ShopService();
+            Product = service.GetProduct(product);
+        }
+    }
+
+    public class ProductDetailModel
+    {
+        public string FeaturedImage { get; set; }
+        public string Title { get; set; }
+        public string Detail { get; set; }
+        public string Category { get; set; }
+        public string CategoryUrl { get; set; }
+        public string Brand { get; set; }
+        public string BrandUrl { get; set; }
+        public decimal Price { get; set; }
+        public decimal TaxRate { get; set; }
+        public decimal DiscountedPrice { get; set; }
+        public List<string> Gallery { get; set; }
+        public IEnumerable<string> Colors { get; set; }
+        public IEnumerable<string> Specifications { get; set; }
+        public IEnumerable<string> Sizes { get; set; }
     }
 }
