@@ -157,6 +157,23 @@
     <Content Include="assets\webfonts\fa-solid-900.svg" />
     <Content Include="assets\webfonts\slick.svg" />
     <Content Include="Global.asax" />
+    <Content Include="SampleData\Brands.sql" />
+    <Content Include="SampleData\Categories.sql" />
+    <Content Include="SampleData\Colors %281%29.sql" />
+    <Content Include="SampleData\Colors %282%29.sql" />
+    <Content Include="SampleData\Colors.sql" />
+    <Content Include="SampleData\ProductImages %281%29.sql" />
+    <Content Include="SampleData\ProductImages %282%29.sql" />
+    <Content Include="SampleData\ProductImages.sql" />
+    <Content Include="SampleData\Products.sql" />
+    <Content Include="SampleData\ProductSizes %281%29.sql" />
+    <Content Include="SampleData\ProductSizes %282%29.sql" />
+    <Content Include="SampleData\ProductSizes.sql" />
+    <Content Include="SampleData\ProductSpecifications %281%29.sql" />
+    <Content Include="SampleData\ProductSpecifications %282%29.sql" />
+    <Content Include="SampleData\ProductSpecifications %283%29.sql" />
+    <Content Include="SampleData\ProductSpecifications %284%29.sql" />
+    <Content Include="SampleData\ProductSpecifications.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
