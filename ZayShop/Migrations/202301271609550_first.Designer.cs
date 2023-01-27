@@ -13,7 +13,7 @@ namespace ZayShop.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202301201823184_first"; }
+            get { return "202301271609550_first"; }
         }
         
         string IMigrationMetadata.Source

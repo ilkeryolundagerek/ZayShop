@@ -68,7 +68,7 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="Utilities">
-      <HintPath>..\..\Utilities.dll</HintPath>
+      <HintPath>..\..\..\..\..\Desktop\Utilities.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -176,9 +176,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202301201823184_first.cs" />
-    <Compile Include="Migrations\202301201823184_first.designer.cs">
-      <DependentUpon>202301201823184_first.cs</DependentUpon>
+    <Compile Include="Migrations\202301271609550_first.cs" />
+    <Compile Include="Migrations\202301271609550_first.designer.cs">
+      <DependentUpon>202301271609550_first.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Home\IndexViewModel.cs" />
@@ -223,8 +223,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202301201823184_first.resx">
-      <DependentUpon>202301201823184_first.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202301271609550_first.resx">
+      <DependentUpon>202301271609550_first.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

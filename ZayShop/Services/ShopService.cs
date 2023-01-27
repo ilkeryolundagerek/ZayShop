@@ -39,9 +39,10 @@ namespace ZayShop.Services
 
         public IEnumerable<ProductListItem> GetProducts(string category = null, string brand = null)
         {
+            var data = _productRepo.ReadMany(x => x.Active && !x.Deleted && x.Brand.Active && !x.Brand.Deleted && x.Category.Active && !x.Category.Deleted);
             if (!string.IsNullOrEmpty(category))
             {
-                return from product in _productRepo.ReadMany(x => x.Active && !x.Deleted)
+                return from product in data
                        where product.Category.Title.ToUrl() == category
                        select new ProductListItem
                        {
@@ -58,7 +59,7 @@ namespace ZayShop.Services
             }
             else if (!string.IsNullOrEmpty(brand))
             {
-                return from product in _productRepo.ReadMany(x => x.Active && !x.Deleted)
+                return from product in data
                        where product.Brand.Title.ToUrl() == brand
                        select new ProductListItem
                        {
@@ -75,7 +76,7 @@ namespace ZayShop.Services
             }
             else
             {
-                return from product in _productRepo.ReadMany(x => x.Active && !x.Deleted)
+                return from product in data
                        select new ProductListItem
                        {
                            Price = product.Price,

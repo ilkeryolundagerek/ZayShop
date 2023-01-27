@@ -56,15 +56,15 @@
                                 <img class="card-img rounded-0 img-fluid" src="@p.FeaturedImage">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="@p.DetailUrl"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="@p.DetailUrl"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="@p.DetailUrl"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success text-white" href="@Url.Action("ProductDetail","Shop",new {product=p.DetailUrl})"><i class="far fa-heart"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="@Url.Action("ProductDetail","Shop",new {product=p.DetailUrl})"><i class="far fa-eye"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="@Url.Action("ProductDetail","Shop",new {product=p.DetailUrl})"><i class="fas fa-cart-plus"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="@p.BrandUrl" class="fs-5 text-decoration-none fw-bold">@p.Brand</a>
-                                <a href="@p.DetailUrl" class="fs-5 text-decoration-none">@p.Title</a>
+                                <a class="fs-5 text-decoration-none fw-bold" href="@Url.Action("Index","Shop",new {@brand=p.BrandUrl})">@p.Brand</a>
+                                <a class="fs-5 text-decoration-none" href="@Url.Action("ProductDetail","Shop",new {product=p.DetailUrl})">@p.Title</a>
                             </div>
                             <div class="card-footer">
                                 <div class="row g-0">
