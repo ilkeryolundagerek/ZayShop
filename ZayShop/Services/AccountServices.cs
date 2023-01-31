@@ -39,5 +39,17 @@ namespace ZayShop.Services
                 _customerRepo.Save();
             }
         }
+
+        public bool Login(LoginViewModel model)
+        {
+            Customer user = _customerRepo.ReadFirst(x => x.Email.Equals(model.Email));
+            if(user != null) {
+                if (user.Password.Equals(model.Password))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

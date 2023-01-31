@@ -1,0 +1,32 @@
+﻿@model ZayShop.Models.Account.LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="container">
+    @using (Html.BeginForm())
+    {
+        <div class="row g-3 py-5">
+            @Html.AntiForgeryToken()
+            <h1 class="h3 mb-3 fw-normal">Login Form</h1>
+            <div class="col-md-4">
+                <div class="form-floating mb-3">
+                    @Html.EditorFor(m => m.Email, new { htmlAttributes = new { @class = "form-control", @placeholder = Html.DisplayNameFor(m => m.Email) } })
+                    @Html.LabelFor(m => m.Email)
+                    @Html.ValidationMessageFor(m => m.Email)
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-floating mb-3">
+                    @Html.EditorFor(m => m.Password, new { htmlAttributes = new { @class = "form-control", @placeholder = Html.DisplayNameFor(m => m.Password) } })
+                    @Html.LabelFor(m => m.Password)
+                    @Html.ValidationMessageFor(m => m.Password)
+                </div>
+            </div>
+            <div class="col-md-4">
+                <button class="w-100 m-auto btn btn-lg btn-primary" type="submit">Login</button>
+            </div>
+        </div>
+    }
+</div>

@@ -197,6 +197,8 @@
     <Compile Include="Data\ProductSize.cs" />
     <Compile Include="Data\ProductSpecification.cs" />
     <Compile Include="Data\Repositories\BrandRepo.cs" />
+    <Compile Include="Data\Repositories\CartItemRepository.cs" />
+    <Compile Include="Data\Repositories\CartRepository.cs" />
     <Compile Include="Data\Repositories\CategoryRepo.cs" />
     <Compile Include="Data\Repositories\CustomerRepo.cs" />
     <Compile Include="Data\Repositories\ProductRepo.cs" />
@@ -214,6 +216,7 @@
       <DependentUpon>202301271842160_likes_stars.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Account\LoginViewModel.cs" />
     <Compile Include="Models\Account\RegisterViewModel.cs" />
     <Compile Include="Models\Home\CategoryOfTheMoonViewModel.cs" />
     <Compile Include="Models\Home\FeaturedProductViewModel.cs" />
@@ -226,6 +229,7 @@
     <Compile Include="Models\Shop\SideMenuItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AccountServices.cs" />
+    <Compile Include="Services\CartServices.cs" />
     <Compile Include="Services\HomeService.cs" />
     <Compile Include="Services\ShopService.cs" />
   </ItemGroup>
@@ -256,6 +260,7 @@
     <Content Include="Views\Shop\ProductDetail.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
