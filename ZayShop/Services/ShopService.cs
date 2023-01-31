@@ -27,13 +27,13 @@ namespace ZayShop.Services
 
         public IEnumerable<SideMenuItem> GetBrands()
         {
-            return from brand in _brandRepo.ReadMany(x => x.Active && !x.Deleted)
+            return from brand in _brandRepo.ReadMany(x => x.Active && !x.Deleted && x.Products.Count() > 0)
                    select new SideMenuItem { Title = brand.Title, Url = brand.Title.ToUrl() };
         }
 
         public IEnumerable<SideMenuItem> GetCategories()
         {
-            return from category in _categoryRepo.ReadMany(x => x.Active && !x.Deleted)
+            return from category in _categoryRepo.ReadMany(x => x.Active && !x.Deleted && x.Products.Count() > 0)
                    select new SideMenuItem { Title = category.Title, Url = category.Title.ToUrl() };
         }
 

@@ -13,6 +13,12 @@ namespace ZayShop.Data.Repositories
         public CategoryRepo() : base(new ZayContext())
         {
         }
+
+        public override IEnumerable<Category> ReadMany(Expression<Func<Category, bool>> predicate = null)
+        {
+            var data = _set.Include(p => p.Products);
+            return predicate != null ? data.Where(predicate) : data;
+        }
     }
 
     public class ProductRepo : GenericRepository<Product>
@@ -44,6 +50,12 @@ namespace ZayShop.Data.Repositories
     {
         public BrandRepo() : base(new ZayContext())
         {
+        }
+
+        public override IEnumerable<Brand> ReadMany(Expression<Func<Brand, bool>> predicate = null)
+        {
+            var data = _set.Include(p => p.Products);
+            return predicate != null ? data.Where(predicate) : data;
         }
     }
 }
