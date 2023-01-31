@@ -4,46 +4,56 @@
 }
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-4 m-auto">
-            <main class="form-signin w-100 p-5 text-center">
-                @using (Html.BeginForm())
-                {
-                    @Html.AntiForgeryToken()
-                    <h1 class="h3 mb-3 fw-normal">Register Form</h1>
-                    <div class="form-floating mb-3">
-                        @Html.EditorFor(m => m.Firstname, new { htmlAttributes = new { @class = "form-control", @placeholder = Html.DisplayNameFor(m => m.Firstname) } })
-                        @Html.LabelFor(m => m.Firstname)
-                        @Html.ValidationMessageFor(m => m.Firstname)
-                    </div>
-                    <div class="form-floating mb-3">
-                        @Html.EditorFor(m => m.Middlename, new { htmlAttributes = new { @class = "form-control", @placeholder = Html.DisplayNameFor(m => m.Middlename) } })
-                        @Html.LabelFor(m => m.Middlename)
-                        @Html.ValidationMessageFor(m => m.Middlename)
-                    </div>
-                    <div class="form-floating mb-3">
-                        @Html.EditorFor(m => m.Lastname, new { htmlAttributes = new { @class = "form-control", @placeholder = Html.DisplayNameFor(m => m.Lastname) } })
-                        @Html.LabelFor(m => m.Lastname)
-                        @Html.ValidationMessageFor(m => m.Lastname)
-                    </div>
-                    <div class="form-floating mb-3">
-                        @Html.EditorFor(m => m.Email, new { htmlAttributes = new { @class = "form-control", @placeholder = Html.DisplayNameFor(m => m.Email) } })
-                        @Html.LabelFor(m => m.Email)
-                        @Html.ValidationMessageFor(m => m.Email)
-                    </div>
-                    <div class="form-floating mb-3">
-                        @Html.EditorFor(m => m.Password, new { htmlAttributes = new { @class = "form-control", @placeholder = Html.DisplayNameFor(m => m.Password) } })
-                        @Html.LabelFor(m => m.Password)
-                        @Html.ValidationMessageFor(m => m.Password)
-                    </div>
-                    <div class="form-floating mb-3">
-                        @Html.EditorFor(m => m.ConfirmPassword, new { htmlAttributes = new { @class = "form-control", @placeholder = Html.DisplayNameFor(m => m.ConfirmPassword) } })
-                        @Html.LabelFor(m => m.ConfirmPassword)
-                        @Html.ValidationMessageFor(m => m.ConfirmPassword)
-                    </div>
-                    <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
-                }
-            </main>
+    @using (Html.BeginForm())
+    {
+        <div class="row g-3 py-5">
+            @Html.AntiForgeryToken()
+            <h1 class="h3 mb-3 fw-normal">Register Form</h1>
+            <div class="col-md-4">
+                <div class="form-floating mb-3">
+                    @Html.EditorFor(m => m.Firstname, new { htmlAttributes = new { @class = "form-control", @placeholder = Html.DisplayNameFor(m => m.Firstname) } })
+                    @Html.LabelFor(m => m.Firstname)
+                    @Html.ValidationMessageFor(m => m.Firstname)
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-floating mb-3">
+                    @Html.EditorFor(m => m.Middlename, new { htmlAttributes = new { @class = "form-control", @placeholder = Html.DisplayNameFor(m => m.Middlename) } })
+                    @Html.LabelFor(m => m.Middlename)
+                    @Html.ValidationMessageFor(m => m.Middlename)
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-floating mb-3">
+                    @Html.EditorFor(m => m.Lastname, new { htmlAttributes = new { @class = "form-control", @placeholder = Html.DisplayNameFor(m => m.Lastname) } })
+                    @Html.LabelFor(m => m.Lastname)
+                    @Html.ValidationMessageFor(m => m.Lastname)
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-floating mb-3">
+                    @Html.EditorFor(m => m.Email, new { htmlAttributes = new { @class = "form-control", @placeholder = Html.DisplayNameFor(m => m.Email) } })
+                    @Html.LabelFor(m => m.Email)
+                    @Html.ValidationMessageFor(m => m.Email)
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-floating mb-3">
+                    @Html.EditorFor(m => m.Password, new { htmlAttributes = new { @class = "form-control", @placeholder = Html.DisplayNameFor(m => m.Password) } })
+                    @Html.LabelFor(m => m.Password)
+                    @Html.ValidationMessageFor(m => m.Password)
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-floating mb-3">
+                    @Html.EditorFor(m => m.ConfirmPassword, new { htmlAttributes = new { @class = "form-control", @placeholder = Html.DisplayNameFor(m => m.ConfirmPassword) } })
+                    @Html.LabelFor(m => m.ConfirmPassword)
+                    @Html.ValidationMessageFor(m => m.ConfirmPassword)
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="w-100 m-auto btn btn-lg btn-primary" type="submit">Register</button>
+            </div>
         </div>
-    </div>
+    }
 </div>

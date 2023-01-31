@@ -196,7 +196,10 @@
     <Compile Include="Data\ProductImages.cs" />
     <Compile Include="Data\ProductSize.cs" />
     <Compile Include="Data\ProductSpecification.cs" />
+    <Compile Include="Data\Repositories\BrandRepo.cs" />
     <Compile Include="Data\Repositories\CategoryRepo.cs" />
+    <Compile Include="Data\Repositories\CustomerRepo.cs" />
+    <Compile Include="Data\Repositories\ProductRepo.cs" />
     <Compile Include="Data\Star.cs" />
     <Compile Include="Data\ZayContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -222,6 +225,7 @@
     <Compile Include="Models\Shop\ShopListViewModel.cs" />
     <Compile Include="Models\Shop\SideMenuItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AccountServices.cs" />
     <Compile Include="Services\HomeService.cs" />
     <Compile Include="Services\ShopService.cs" />
   </ItemGroup>
